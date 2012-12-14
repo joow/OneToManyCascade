@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+        version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+    <persistence-unit name="test" transaction-type="RESOURCE_LOCAL">
+        <class>org.domaine.DimensionPierre</class>
+        <class>org.domaine.FormePierre</class>
+        <class>org.domaine.NaturePierre</class>
+        <class>org.domaine.LigneComposition</class>
+        <class>org.domaine.LigneCompositionModele</class>
+        <class>org.domaine.Modele</class>
+        
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:"/>
+            <property name="eclipselink.ddl-generation" value="create-tables"/>
+            <property name="eclipselink.logging.level" value="FINE"/>
+        </properties>
+    </persistence-unit>
+</persistence>
